@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSS Gradients</title>
+    <title>Blue Glow</title>
 
     <style>
-        .container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 50px;
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
         }
 
-        .item {
-            text-align: center;
-        }
-
-        .box {
+        .glow {
             width: 250px;
-            height: 200px;
-            border: 2px solid black;
-        }
+            height: 250px;
+            margin: 50px auto;
 
-        .linear {
-            background: linear-gradient(to right, black, red);
-        }
-
-        .radial {
-            background: radial-gradient(circle, red, black);
-        }
-
-        .conic {
-            background: conic-gradient(red, black);
+            background: radial-gradient(
+                circle,
+                white 0%,
+                #8fd8ff 5%,
+                #008cff 15%,
+                #0055ff 30%,
+                rgba(0, 85, 255, 0.5) 45%,
+                rgba(0, 85, 255, 0.2) 60%,
+                transparent 75%
+            );
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <div class="item">
-            <h2>Linear Gradient</h2>
-            <div class="box linear"></div>
-        </div>
-
-        <div class="item">
-            <h2>Radial Gradient</h2>
-            <div class="box radial"></div>
-        </div>
-
-        <div class="item">
-            <h2>Conic Gradient</h2>
-            <div class="box conic"></div>
-        </div>
-
-    </div>
+    <div class="glow"></div>
 
 </body>
 </html>
